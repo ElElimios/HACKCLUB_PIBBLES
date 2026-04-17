@@ -5,7 +5,7 @@ const resultContainer = document.getElementById('result-container');
 const pibbleName = document.getElementById('pibble-name');
 const pibbleImg = document.getElementById('pibble-img');
 
-const BACKEND_URL = "https://elelimios-pibble-classifier.hf.space";
+const BACKEND_URL = "https://elelimios-pibble-classifier.hf.space/classify";
 
 navigator.mediaDevices.getUserMedia({ video: true })
     .then(stream => { video.srcObject = stream; })

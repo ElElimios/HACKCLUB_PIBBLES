@@ -8,26 +8,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="glass-card">
-        <h1 class="title">Pibble Scanner</h1>
-        <p class="subtitle">Discover your true inner Pibble!!!</p>
-        <p class="subtitle">Zip zip zip zap zap zap zup zup</p>
+    <div class="glass-card main-layout">
+        <div class="scanner-section">
+            <h1 class="title">Pibble Scanner</h1>
+            <p class="subtitle">Show your emotions to the camera!</p>
+            
+            <div class="camera-wrapper">
+                <video id="video" autoplay playsinline></video>
+                <div class="scan-bar"></div>
+            </div>
+            
+            <button id="snap">REVEAL MY PIBBLE NOWW!!</button>
 
-        <div class="camera-wrapper">
-            <video id="video" autoplay playsinline></video>
-            </div class="scan-bar"></div>
-    </div>
+            <div id="result-container" class="hidden">
+                <div class="divider"></div>
+                <h2 id="pibble-name"></h2>
+                <div class="image-frame">
+                    <img id="pibble-img" src="" alt="Result">
+                </div>
+            </div>
+        </div>
 
-    <button id="snap">REVEAL MY PIBBLE NOOW</button>
-
-    <div id="result-container" class="hidden">
-        <div class="divider"></div>
-        <h2 id="pibble-name"></h2>
-        <div class="image-frame">
-            <img src="" id="pibble-img"> 
+        <div class="side-guide">
+            <h3 class="guide-title">Expression Guide</h3>
+            <ul class="guide-list">
+                <li><span class="emoji">👽</span> <strong>Alien:</strong> Scared!</li>
+                <li><span class="emoji">✨</span> <strong>Animated:</strong> Smile!</li>
+                <li><span class="emoji">🍔</span> <strong>Burger:</strong> Neutral / Surprised</li>
+                <li><span class="emoji">😈</span> <strong>Evil:</strong> Angry Face</li>
+                <li><span class="emoji">🍕</span> <strong>Fat:</strong> Sad Face</li>
+            </ul>
         </div>
     </div>
-    <canvas id="canvas" style="display: none;"></canvas>
+    <canvas id="canvas" style="display:none;"></canvas>
     <script src="script.js"></script>
 </body>
 </html>
